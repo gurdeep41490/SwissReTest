@@ -7,6 +7,7 @@
     <groupId>com.casestudy.data.organisation</groupId>
     <artifactId>dataOrganisationService</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>     
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -34,5 +35,22 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.casestudy.data.organisation.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
